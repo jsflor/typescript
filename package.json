@@ -1,0 +1,29 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz",
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "Juan Sebastian Flor <sebastian-flor@hotmail.com> (https://github.com/jsflor)",
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "ghooks": "^2.0.4",
+    "lite-server": "^2.5.4",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks":{
+      "commit-msg":"validate-commit-msg"
+    }
+  }
+}
