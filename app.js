@@ -1,14 +1,15 @@
-function add(n1, n2, showResult, phrase) {
-    var result = n1 + n2;
-    if (showResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
+/* OBJECTS, ARRAYS & TUPLES */
+var person = {
+    name: 'Sebastian',
+    age: 23,
+    hobbies: ['Sports', 'Cooking'],
+    role: [2, 'author']
+};
+var favoriteActivities;
+favoriteActivities = ['Sports'];
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
+    //console.log(hobby.map()); // ERROR!!
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = 'The result is: ';
-add(number1, number2, printResult, resultPhrase);
+console.log(person);
