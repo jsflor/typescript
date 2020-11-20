@@ -1,17 +1,17 @@
-function combine(input1, input2, resultConversion) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    // if(resultConversion === 'as-number'){
-    //     return +result;
-    // } else {
-    //     return result.toString();
-    // }
-    return result;
+function add(n1, n2) {
+    return n1 + n2;
 }
-console.log(combine(2, 4, 'as-number'));
-console.log(combine('Juan', 'Sebastian', 'as-text'));
+function printResult(num) {
+    console.log('Result: ' + num);
+}
+// Callbacks
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+printResult(add(4, 5));
+addAndHandle(4, 5, printResult);
+// Function as type
+var combineValues;
+combineValues = add;
+console.log(combineValues(7, 6));
